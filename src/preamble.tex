@@ -1,0 +1,96 @@
+%% Titelbild
+\titleimage{banner_2020_kit}
+
+%% Gruppenlogo
+\grouplogo{kitlogo_en_rgb} 
+
+%% -------------------
+%% | Title and names |
+%% -------------------
+\title[Multilingual Segmentation]{%
+  Multilingual Punctuation and Casing Prediction for Speech Translation}
+\subtitle{Institute for Anthropomatics and Robotics (IAR)} 
+\author[Aiko]{Aiko Wessels}
+\groupname{Advisor: Dr. Thanh-Le Ha}
+\date[\today]{\today}
+
+%% ----------------
+%% | Bibliography |
+%% ----------------
+\usepackage[citestyle=numeric,bibstyle=numeric,hyperref,backend=biber]{biblatex}
+\addbibresource{cite/presentation.bib}
+\bibhang1em
+
+%% ------------------
+%% | Minted package |
+%% ------------------
+\usepackage[outputdir=build,newfloat=true]{minted}
+\usepackage[skins,minted]{tcolorbox}
+\usepackage[compatibility=false]{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{csquotes}
+
+\graphicspath{ {img/} {../img/} }
+
+
+%% -----------------
+%% | Custom colors |
+%% -----------------
+\definecolor{mintedbackground}{rgb}{0.95,0.95,0.95}
+
+%% ----------------------
+%% | Minted code styles |
+%% ----------------------
+\setminted{autogobble, tabsize=4}
+
+\setminted[bash]{
+    bgcolor=mintedbackground,
+    fontfamily=tt,
+    linenos=false,
+    numberblanklines=true,
+    numbersep=12pt,
+    numbersep=5pt,
+    gobble=0,
+    frame=leftline,
+    framesep=2mm,
+    funcnamehighlighting=true,
+    tabsize=4,
+    obeytabs=false,
+    mathescape=false
+    samepage=false,
+    showspaces=false,
+    showtabs=false,
+    texcl=false,
+    baselinestretch=1.2,
+    fontsize=\footnotesize,
+    breaklines=true,
+}
+
+%% -----------------------
+%% | Custom box listings |
+%% -----------------------
+\newtcblisting{bashfile}[2][]{%
+  listing engine=minted,%
+  listing only,%
+  #1,%
+  title=#2,%
+  minted language=bash,%
+  colback=mintedbackground,%
+}
+
+%% -------------------
+%% | Custom Commands |
+%% -------------------
+\newcommand{\fmtpygmentize}{\mintinline{zsh}{pygmentize}}
+\newcommand{\fmtminted}{\mintinline{zsh}{minted}}
+\newcommand{\fmtconda}{\mintinline{zsh}{conda}}
+\newcommand{\fmtlatexmk}{\mintinline{zsh}{latexmk}}
+\newcommand{\fmtmono}[1]{\texttt{#1}}
+
+%% -----------------------
+%% | Custom environments |
+%% -----------------------
+\newenvironment{fframe}[1][]%
+  {\begin{frame}[fragile,environment=fframe,#1]}%
+  {\end{frame}}%
