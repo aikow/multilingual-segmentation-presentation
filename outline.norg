@@ -1,0 +1,48 @@
+@document.meta
+  title: Multilingual Segmentation Presentation
+  description: 
+  authors: Aiko Wessels
+  categories: ba
+  created: 2022-07-18
+  version: 0.0.11
+@end
+
+= ToC
+
+* Presentation
+  
+ ** Dates
+
+    *Mid-term:* 25. July 2022
+    *Final*: 3. August 2022
+
+ ** Outline
+
+  *** Introduction
+
+      - Introduce the problem
+      -- Speech translation
+      -- Punctuation and casing prediction
+      -- Related works
+      --- Motivation, i.e. what problems those works didn't solve
+      - My approach
+      -- Implicit vs explicit encoding
+      - Experiments
+      -- Settings
+      -- Results
+      -- Analysis of results
+      -- Discussion
+      - Conclusion
+      -- Broader summary of effectiveness
+      - Future works
+
+ ** Notes
+
+    link here: {** Outline}
+
+    - Length of the presentation should be about 20 minutes
+    - Try to get around 12-16 slides and trim down
+    - 10-30 minutes of questions by Alex after the presentation
+    - The presentation is much more important than the thesis
+    - Define /segmentation/ clearly before using, or just don't use it in the
+      presentation
